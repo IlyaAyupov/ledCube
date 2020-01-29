@@ -1,0 +1,1 @@
+ #deﬁne ADC_PIN 0 //аналоговый пин, к которому подключен потенциометр  #deﬁne PWM_PIN 9 //цифровой пин, к которому подключен транзисторvoid setup() {    pinMode(PWM_PIN,OUTPUT); //устанавливаем пин на выход}void loop() {    int val=analogRead(ADC_PIN);//считывание значения потенциометра     analogWrite(PWM_PIN,val>>2);//запись значения в ШИМ}
